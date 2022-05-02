@@ -55,7 +55,7 @@ export default function Navbar(props) {
       about: PropTypes.string
   }
 
-//   Navbar.defaultProps = {
-//       title: 'TextUtils',
-//       about: 'AboutUs'
-//   }
+  Navbar.defaultProps = {
+      title: 'TextUtils',
+      about: 'AboutUs'
+  }
