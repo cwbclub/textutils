@@ -9,11 +9,21 @@ export default function TextForm(props) {
         let newText= text.toUpperCase();
         setText(newText)
     }
-
     const handleOnChange = (event) => {
         console.log("OnChange")
         setText( event.target.value);
     }
+
+    const handleLoClick = () =>{
+      console.log("LowerCase button was clicked"+text)
+      let newText = text.toLowerCase();
+      setText(newText)
+    }
+    const handleLoChange = (event) => {
+      console.log("OnChange")
+      setText(event.target.value)
+    }
+
 
     const [text, setText] = useState('');
     // setText('new text'); to change text variable
@@ -32,7 +42,8 @@ export default function TextForm(props) {
             defaultValue={""}
           />
         </div>
-            <button className="btn btn-primary" onClick={handleUpClick}>Convert to Uppercase</button>
+            <button className="btn btn-outline-success mx-2" onClick={handleUpClick}>Convert to Uppercase</button>
+            <button className="btn btn-outline-success mx-2" onClick={handleLoClick}>Convert to Lowercase</button>
       </div>
       <div className="container my-2">
         <h3>Your Text Summary</h3>
