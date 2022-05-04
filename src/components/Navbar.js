@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import React from "react";
 
 export default function Navbar(props) {
@@ -21,7 +21,7 @@ export default function Navbar(props) {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav me-auto  mb-lg-0">
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="/">
                   Home
@@ -48,14 +48,14 @@ export default function Navbar(props) {
         </div>
       </nav>
     </>
-  )
+  );
 }
- Navbar.propTypes = {
-      title: PropTypes.string.isRequired,
-      about: PropTypes.string
-  }
+Navbar.propTypes = {
+  title: PropTypes.string.isRequired,
+  about: PropTypes.string
+};
 
-  Navbar.defaultProps = {
-      title: 'TextUtils',
-      about: 'AboutUs'
-  }
+Navbar.defaultProps = {
+  title: "TextUtils",
+  about: "AboutUs"
+};
