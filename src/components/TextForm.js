@@ -28,8 +28,13 @@ export default function TextForm(props) {
     }
   };
 
+  const handleExtraSpaces = () => {
+    let newText = text.split(/[ ]+/)
+    setText(newText.join(" "))
+  }
+
   const handleCopy = () => {
-    var text = document.getElementById("myBox");
+    let text = document.getElementById("myBox");
     text.select();
     navigator.clipboard.writeText(text.value);
   }
@@ -70,6 +75,12 @@ export default function TextForm(props) {
           Convert to Binary
         </button>
 
+        <button
+          className="btn btn-outline-dark mx-2"
+          onClick={handleExtraSpaces}
+        >
+          Remove Extra Spaces
+        </button>
         <button
           className="btn btn-outline-dark mx-2"
           onClick={handleCopy}
