@@ -29,15 +29,15 @@ export default function TextForm(props) {
   };
 
   const handleExtraSpaces = () => {
-    let newText = text.split(/[ ]+/)
-    setText(newText.join(" "))
-  }
+    let newText = text.split(/[ ]+/);
+    setText(newText.join(" "));
+  };
 
   const handleCopy = () => {
     let text = document.getElementById("myBox");
     text.select();
     navigator.clipboard.writeText(text.value);
-  }
+  };
 
   const handleClearClick = () => {
     console.log("Clear" + text);
@@ -81,10 +81,7 @@ export default function TextForm(props) {
         >
           Remove Extra Spaces
         </button>
-        <button
-          className="btn btn-outline-dark mx-2"
-          onClick={handleCopy}
-        >
+        <button className="btn btn-outline-dark mx-2" onClick={handleCopy}>
           Copy Text
         </button>
 

@@ -38,10 +38,10 @@ export default function About() {
         <main>
           <h3>Get started</h3>
           <p className="fs-5 col-md-8">
-            Quickly and easily get started with Bootstrap's compiled,
-            production-ready files with this barebones example featuring some
-            basic HTML and helpful links. Download all our examples to get
-            started.
+            Quickly and easily get started with TextUtils, Text Utils is a text
+            formatter websitw which helps to change youe text in uppercase,
+            lowercase, wordcount, remove extra spaces which will be useful to
+            peoples and many other features will be added soon.
           </p>
 
           {/* <hr className="col-3 col-md-2 mb-5" /> */}
@@ -99,7 +99,7 @@ export default function About() {
         <button
           onClick={toggleStyle}
           type="button"
-          class="btn btn-outline-secondary"
+          className="btn btn-outline-secondary"
         >
           {btnText}
         </button>
