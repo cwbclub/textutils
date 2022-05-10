@@ -18,6 +18,7 @@ export default function TextForm(props) {
     setText(newText);
   };
 
+  // This binary is not working on whole , need to be fixed
   const handleBinaryClick = () => {
     console.log("Binary was clicked" + text);
 
@@ -26,6 +27,12 @@ export default function TextForm(props) {
       setText(newText);
     }
   };
+
+  const handleCopy = () => {
+    var text = document.getElementById("myBox");
+    text.select();
+    navigator.clipboard.writeText(text.value);
+  }
 
   const handleClearClick = () => {
     console.log("Clear" + text);
@@ -62,8 +69,16 @@ export default function TextForm(props) {
         >
           Convert to Binary
         </button>
+
         <button
           className="btn btn-outline-dark mx-2"
+          onClick={handleCopy}
+        >
+          Copy Text
+        </button>
+
+        <button
+          className="btn btn-outline-danger mx-2"
           onClick={handleClearClick}
         >
           Clear Text
@@ -87,5 +102,5 @@ TextForm.propTypes = {
 };
 
 TextForm.defaultProps = {
-  heading: "textarea"
+  heading: "textarea",
 };
