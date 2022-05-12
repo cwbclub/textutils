@@ -1,7 +1,8 @@
 import './App.css';
 import React, { useState } from 'react';
-import About from './components/About';
 import Navbar from './components/Navbar';
+import Alert from './components/Alert';
+import About from './components/About';
 import TextForm from './components/TextForm';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
   return (
     <>
       <Navbar title="TextUtils" about='AboutUs' mode={mode} toggleMode={toggleMode} />
+      <Alert alert='This is Alert' />
       <TextForm heading="Enter the text to analyze" mode={mode} />
       {/* <About /> */}
 
