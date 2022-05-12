@@ -6,17 +6,19 @@ export default function TextForm(props) {
     console.log("UpperCase button was clicked" + text);
     let newText = text.toUpperCase();
     setText(newText);
-    props.showAlert("Converted to uppercase", "success")
+    props.showAlert("Converted to Uppercase", "success")
   };
   const handleOnChange = (event) => {
     console.log("OnChange");
     setText(event.target.value);
+
   };
 
   const handleLoClick = () => {
     console.log("LowerCase button was clicked" + text);
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert("Converted to Lowerercase", "success")
   };
 
   // This binary is not working on whole , need to be fixed
@@ -27,23 +29,27 @@ export default function TextForm(props) {
       let newText = text[i].charCodeAt(0).toString(2) + " ";
       setText(newText);
     }
+    props.showAlert("Converted to Binary", "success")
   };
 
   const handleExtraSpaces = () => {
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "));
+    props.showAlert("Extra spaces removed", "success")
   };
 
   const handleCopy = () => {
     let text = document.getElementById("myBox");
     text.select();
     navigator.clipboard.writeText(text.value);
+    props.showAlert("Text copied", "success")
   };
 
   const handleClearClick = () => {
     console.log("Clear" + text);
     let newText = "";
     setText(newText);
+    props.showAlert("Text cleared", "success")
   };
 
   const [text, setText] = useState("");
