@@ -44,55 +44,26 @@ export default function About() {
             peoples and many other features will be added soon.
           </p>
 
-          {/* <hr className="col-3 col-md-2 mb-5" /> */}
-          <div className="row g-4">
-            <div className="col-md-6">
-              <h3>Starter projects</h3>
-              <p>
-                Ready to beyond the starter template? Check out these open
-                source projects that you can quickly duplicate to a new GitHub
-                repository.
-              </p>
-              <ul className="icon-list">
-                <li>
-                  <a
-                    href="https://github.com/twbs/bootstrap-npm-starter"
-                    rel="noopener"
-                    target="_blank"
-                  >
-                    Bootstrap npm starter
-                  </a>
-                </li>
-                <li className="text-muted">
-                  Bootstrap Parcel starter (coming soon!)
-                </li>
-              </ul>
-            </div>
-            <div className="col-md-6">
-              <h3>Guides</h3>
-              <p>Read more detailed instructions and documentation on.</p>
-              <ul className="icon-list">
-                <li>
-                  <a href="/docs/5.1/getting-started/introduction/">
-                    Bootstrap quick start guide
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.w3schools.com/">
-                    W3Schools Online Web Tutorials
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.freecodecamp.org/">freeCodeCamp</a>
-                </li>
-                <li>
-                  <a href="/docs/5.1/getting-started/contribute/">
-                    Contributing to Bootstrap
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <h3>Analyze your text</h3>
+          <p>
+            TextUtils gives you a way to analyze your texts quickly and
+            efficiently
+          </p>
+
+          <h3>Free to use</h3>
+          <p>
+            TextUtil is a free charcter counter tool that provides instant
+            character count and word count statics for a giveb text. TextUtils
+            reports the number of words and characters. Thus it is suitable for
+            writting text with word/character limit.{" "}
+          </p>
+
+          <h3>Browser Compatible</h3>
+          <p>
+            This word counter software works in any web browser sucha as Chrome,
+            Firefox, Brave, Edge, Opera, etc.It suits to count characters in
+            facebook, blog,books, excel documents, pdf's, essays, etc.
+          </p>
         </main>
       </div>
       <div className="container p-3" style={myStyle}>
