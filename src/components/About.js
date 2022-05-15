@@ -1,32 +1,37 @@
-import React, { useState } from "react";
+import React from "react";
 
-export default function About() {
-  const [myStyle, setMyStyle] = useState({
-    color: "black",
-    backgroundColor: "white",
-  });
-  const [btnText, setBtnText] = useState("Enable Dark Mode");
+export default function About(props) {
+  // const [myStyle, setMyStyle] = useState({
+  //   color: "black",
+  //   backgroundColor: "white",
+  // });
+  // const [btnText, setBtnText] = useState("Enable Dark Mode");
 
-  const toggleStyle = () => {
-    if (myStyle.color === "white") {
-      setMyStyle({
-        color: "black",
-        backgroundColor: "white",
-      });
-      setBtnText("Enable Dark Mode");
-    } else {
-      setMyStyle({
-        color: "white",
-        backgroundColor: "black",
-        // border:'0.5px solid white'
-      });
-      setBtnText("Enable Light mode");
-    }
-  };
+  // const toggleStyle = () => {
+  //   if (myStyle.color === "white") {
+  //     setMyStyle({
+  //       color: "black",
+  //       backgroundColor: "white",
+  //     });
+  //     setBtnText("Enable Dark Mode");
+  //   } else {
+  //     setMyStyle({
+  //       color: "white",
+  //       backgroundColor: "black",
+  //       // border:'0.5px solid white'
+  //     });
+  //     setBtnText("Enable Light mode");
+  //   }
+  // };
+
+  let myStyle = {
+    color: props.mode === 'dark' ? 'white' : '#042743',
+    backgroundColor: props.mode === 'dark' ? '#042743' : 'white'
+  }
 
   return (
-    <div style={myStyle}>
-      <div className=" container p-4" style={myStyle}>
+    <div style={myStyle}  >
+      <div className=" container p-4" style={myStyle}  >
         <header className="d-flex align-items-center pb-3 mb-5 border-bottom">
           <a
             href="/"
@@ -35,7 +40,7 @@ export default function About() {
             <h2 style={myStyle}>About us</h2>
           </a>
         </header>
-        <main>
+        <main style={myStyle}    >
           <h3>Get started</h3>
           <p className="fs-5 col-md-8">
             Quickly and easily get started with TextUtils, Text Utils is a text
@@ -67,13 +72,13 @@ export default function About() {
         </main>
       </div>
       <div className="container p-3" style={myStyle}>
-        <button
+        {/* <button
           onClick={toggleStyle}
           type="button"
           className="btn btn-outline-secondary"
         >
           {btnText}
-        </button>
+        </button> */}
       </div>
     </div>
   );
