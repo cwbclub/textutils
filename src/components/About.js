@@ -25,13 +25,13 @@ export default function About(props) {
   // };
 
   let myStyle = {
-    color: props.mode === 'dark' ? 'white' : '#042743',
-    backgroundColor: props.mode === 'dark' ? '#042743' : 'white'
-  }
+    color: props.mode === "dark" ? "white" : "#042743",
+    backgroundColor: props.mode === "dark" ? "#042743" : "white",
+  };
 
   return (
-    <div style={myStyle} className='my-4'>
-      <div className=" container p-4" style={myStyle}  >
+    <div style={myStyle} className="my-4">
+      <div className=" container p-4" style={myStyle}>
         <header className="d-flex align-items-center pb-3 mb-5 border-bottom">
           <a
             href="/"
@@ -40,9 +40,9 @@ export default function About(props) {
             <h2 style={myStyle}>About us</h2>
           </a>
         </header>
-        <main style={myStyle}    >
+        <main style={myStyle}>
           <h3>Get started</h3>
-          <p >
+          <p>
             Quickly and easily get started with TextUtils, Text Utils is a text
             formatter websitw which helps to change youe text in uppercase,
             lowercase, wordcount, remove extra spaces which will be useful to
@@ -60,7 +60,7 @@ export default function About(props) {
             TextUtil is a free charcter counter tool that provides instant
             character count and word count statics for a giveb text. TextUtils
             reports the number of words and characters. Thus it is suitable for
-            writting text with word/character limit.{" "}
+            writting text with word/character limit.
           </p>
 
           <h4>Browser Compatible</h4>

@@ -6,19 +6,18 @@ export default function TextForm(props) {
     console.log("UpperCase button was clicked" + text);
     let newText = text.toUpperCase();
     setText(newText);
-    props.showAlert("Converted to Uppercase", "success")
+    props.showAlert("Converted to Uppercase", "success");
   };
   const handleOnChange = (event) => {
     console.log("OnChange");
     setText(event.target.value);
-
   };
 
   const handleLoClick = () => {
     console.log("LowerCase button was clicked" + text);
     let newText = text.toLowerCase();
     setText(newText);
-    props.showAlert("Converted to Lowerercase", "success")
+    props.showAlert("Converted to Lowerercase", "success");
   };
 
   // This binary is not working on whole , need to be fixed
@@ -29,27 +28,28 @@ export default function TextForm(props) {
       let newText = text[i].charCodeAt(0).toString(2) + " ";
       setText(newText);
     }
-    props.showAlert("Converted to Binary", "success")
+    props.showAlert("Converted to Binary", "success");
   };
 
   const handleExtraSpaces = () => {
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "));
-    props.showAlert("Extra spaces removed", "success")
+    props.showAlert("Extra spaces removed", "success");
   };
 
   const handleCopy = () => {
     let text = document.getElementById("myBox");
     text.select();
     navigator.clipboard.writeText(text.value);
-    props.showAlert("Text copied", "success")
+    document.getSelection().removeAllRanges();
+    props.showAlert("Text copied", "success");
   };
 
   const handleClearClick = () => {
     console.log("Clear" + text);
     let newText = "";
     setText(newText);
-    props.showAlert("Text cleared", "success")
+    props.showAlert("Text cleared", "success");
   };
 
   const [text, setText] = useState("");
@@ -76,13 +76,22 @@ export default function TextForm(props) {
             defaultValue={""}
           />
         </div>
-        <button className="btn btn-dark mx-2 my-1" onClick={handleUpClick}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-dark mx-2 my-1"
+          onClick={handleUpClick}
+        >
           Convert to Uppercase
         </button>
-        <button className="btn btn-dark mx-2 my-1" onClick={handleLoClick}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-dark mx-2 my-1"
+          onClick={handleLoClick}
+        >
           Convert to Lowercase
         </button>
         <button
+          disabled={text.length === 0}
           className="btn btn-dark mx-2 my-1"
           onClick={handleBinaryClick}
         >
@@ -90,16 +99,22 @@ export default function TextForm(props) {
         </button>
 
         <button
+          disabled={text.length === 0}
           className="btn btn-dark mx-2 my-1"
           onClick={handleExtraSpaces}
         >
           Remove Extra Spaces
         </button>
-        <button className="btn btn-dark mx-2 my-1" onClick={handleCopy}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-dark mx-2 my-1"
+          onClick={handleCopy}
+        >
           Copy Text
         </button>
 
         <button
+          disabled={text.length === 0}
           className="btn btn-outline-danger mx-2 my-1"
           onClick={handleClearClick}
         >
@@ -112,14 +127,23 @@ export default function TextForm(props) {
       >
         <h3>Your Text Summary</h3>
         <p>
-          {text.split(" ").filter((element) => { return element.length !== 0 }).length} words and {text.length} letters
+          {
+            text.split(" ").filter((element) => {
+              return element.length !== 0;
+            }).length
+          }{" "}
+          words and {text.length} letters
         </p>
-        <p>{0.008 * text.split(" ").filter((element) => { return element.length !== 0 }).length}Minutes to read</p>
+        <p>
+          {0.008 *
+            text.split(" ").filter((element) => {
+              return element.length !== 0;
+            }).length}
+          Minutes to read
+        </p>
         <h3>Preview</h3>
         <p className="border p-4">
-          {text.length > 0
-            ? text
-            : "Enter something in the textbox above to preview!"}
+          {text.length > 0 ? text : "Nothing to preview!"}
         </p>
       </div>
     </>
