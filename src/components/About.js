@@ -30,7 +30,7 @@ export default function About(props) {
   }
 
   return (
-    <div style={myStyle}  >
+    <div style={myStyle} className='my-4'>
       <div className=" container p-4" style={myStyle}  >
         <header className="d-flex align-items-center pb-3 mb-5 border-bottom">
           <a
@@ -42,20 +42,20 @@ export default function About(props) {
         </header>
         <main style={myStyle}    >
           <h3>Get started</h3>
-          <p className="fs-5 col-md-8">
+          <p >
             Quickly and easily get started with TextUtils, Text Utils is a text
             formatter websitw which helps to change youe text in uppercase,
             lowercase, wordcount, remove extra spaces which will be useful to
             peoples and many other features will be added soon.
           </p>
 
-          <h3>Analyze your text</h3>
+          <h4>Analyze your text</h4>
           <p>
             TextUtils gives you a way to analyze your texts quickly and
             efficiently
           </p>
 
-          <h3>Free to use</h3>
+          <h4>Free to use</h4>
           <p>
             TextUtil is a free charcter counter tool that provides instant
             character count and word count statics for a giveb text. TextUtils
@@ -63,7 +63,7 @@ export default function About(props) {
             writting text with word/character limit.{" "}
           </p>
 
-          <h3>Browser Compatible</h3>
+          <h4>Browser Compatible</h4>
           <p>
             This word counter software works in any web browser sucha as Chrome,
             Firefox, Brave, Edge, Opera, etc.It suits to count characters in

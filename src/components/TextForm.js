@@ -57,7 +57,7 @@ export default function TextForm(props) {
   return (
     <>
       <div
-        className="container my-3"
+        className="container "
         style={{ color: props.mode === "dark" ? "white" : "black" }}
       >
         <h2 className="mt-5 mb-3 pt-40">{props.heading} </h2>
@@ -114,7 +114,7 @@ export default function TextForm(props) {
         <p>
           {text.split(" ").filter((element) => { return element.length !== 0 }).length} words and {text.length} letters
         </p>
-        <p>{0.008 * text.split(" ").length}Minutes to read</p>
+        <p>{0.008 * text.split(" ").filter((element) => { return element.length !== 0 }).length}Minutes to read</p>
         <h3>Preview</h3>
         <p className="border p-4">
           {text.length > 0
